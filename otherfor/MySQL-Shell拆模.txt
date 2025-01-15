@@ -81,7 +81,7 @@ Type '\help' or '\?' for help; '\quit' to exit.
 Switching to Python mode...
  MySQL  Py >
  MySQL  Py >
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = '                                                                                                                            t_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -122,7 +122,7 @@ IndentationError: unexpected indent
  MySQL  Py >
  MySQL  Py >
  MySQL  Py >
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = '                                                                                                                            t_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -187,7 +187,7 @@ Other names may be trademarks of their respective owners.
 Type '\help' or '\?' for help; '\quit' to exit.
  MySQL  JS > \py
 Switching to Python mode...
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = '                                                                                                                            t_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -215,7 +215,7 @@ Traceback (most recent call last):
 mysqlsh.DBError: MySQL Error (1136): ClassicSession.run_sql: Column count doesn't match value count at row 1
  MySQL  Py > print(f"DEBUG: Insert query: {insert_query}")
 DEBUG: Insert query: INSERT INTO t_recments_1 SELECT `URID`, `ORGID`, `NOTECODE`, `APPORGID`, `SETTLEMENTMODE`, `                                                                                                                            PAYTYPEID`, `PAYDATE`, `PAYOBJECTTYPE`, `PAYBANKACCOUNTNAME`, `RECOBJECTTYPE`, `RECORGID`, `RECBANKACCOUNTNAME`,                                                                                                                             `RECCURRENCYID`, `RECMONEY`, `MONEYWAY`, `FASTFLAG`, `OTHERREGIONFLAG`, `OTHERBANKFLAG`, `PAYCURRENCYID`, `EXCHAN                                                                                                                            GERATE` FROM t_recments
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = '                                                                                                                            t_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -249,7 +249,7 @@ KeyError: 'URID'
  MySQL  Py > print(f"DEBUG: Insert query: {insert_query}")
 DEBUG: Insert query: INSERT INTO t_recments_1 (URID, ORGID, NOTECODE, APPORGID, SETTLEMENTMODE, PAYTYPEID, PAYDAT                                                                                                                            E, PAYOBJECTTYPE, PAYBANKACCOUNTNAME, RECOBJECTTYPE, RECORGID, RECBANKACCOUNTNAME, RECCURRENCYID, RECMONEY, MONEY                                                                                                                            WAY, FASTFLAG, OTHERREGIONFLAG, OTHERBANKFLAG, PAYCURRENCYID, EXCHANGERATE) SELECT `URID`, `ORGID`, `NOTECODE`, `                                                                                                                            APPORGID`, `SETTLEMENTMODE`, `PAYTYPEID`, `PAYDATE`, `PAYOBJECTTYPE`, `PAYBANKACCOUNTNAME`, `RECOBJECTTYPE`, `REC                                                                                                                            ORGID`, `RECBANKACCOUNTNAME`, `RECCURRENCYID`, `RECMONEY`, `MONEYWAY`, `FASTFLAG`, `OTHERREGIONFLAG`, `OTHERBANKF                                                                                                                            LAG`, `PAYCURRENCYID`, `EXCHANGERATE` FROM t_recments
  MySQL  Py >
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
     rs.run_sql(insert_query, tuple(data[col] for col in columns))
 
@@ -295,7 +295,7 @@ for i in range(0, len(field_names), 20):
 Traceback (most recent call last):
   File "<string>", line 11, in <module>
 mysqlsh.DBError: MySQL Error (1050): ClassicSession.run_sql: Table 't_recments_1' already exists
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = '                                                                                                                            t_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -356,29 +356,29 @@ Other names may be trademarks of their respective owners.
 Type '\help' or '\?' for help; '\quit' to exit.
  MySQL  JS > \py
 Switching to Python mode...
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats
   File "<string>", line 1
-    conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats
+    conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats
             ^
 SyntaxError: unterminated string literal (detected at line 1)
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
 mysqlsh.DBError: MySQL Error (2026): mysql.get_classic_session: SSL connection error: SSL is required but the server doesn't support it
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl_disabled=True'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl_disabled=True'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
 ValueError: mysql.get_classic_session: Argument #1: Invalid URI: Invalid connection option 'ssl_disabled'.
 
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl_ca=None'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl_ca=None'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
 ValueError: mysql.get_classic_session: Argument #1: Invalid URI: Invalid connection option 'ssl_ca'.
 
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > rs.run_sql('select * from mysql.user')
 +----------------+---------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+----------+------------+-------------+--------------+---------------+-------------+-----------------+----------------------+-----------------------+-------------------------------------------+------------------+-----------------------+-------------------+----------------+
@@ -431,7 +431,7 @@ ValueError: mysql.get_classic_session: Argument #1: Invalid URI: Invalid connect
 +--------------------+
 6 rows in set (0.0036 sec)
  MySQL  Py >
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > for i in range(1,11):
           ->     f_list1 = []
@@ -781,7 +781,7 @@ Type '\help' or '\?' for help; '\quit' to exit.
  MySQL  JS >
  MySQL  JS > \py
 Switching to Python mode...
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = 't_recments' AND TABLE_SCHEMA = 'your_database_name'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -813,7 +813,7 @@ Empty set (0.0012 sec)
 Traceback (most recent call last):
   File "<string>", line 5, in <module>
 mysqlsh.DBError: MySQL Error (1064): ClassicSession.run_sql: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FORCE INT, FASTPAY INT)' at line 1
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
 Query OK, 0 rows affected (0.1730 sec)
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py >
@@ -1368,7 +1368,7 @@ Type '\help' or '\?' for help; '\quit' to exit.
  MySQL  JS >
  MySQL  JS > \py
 Switching to Python mode...
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = 't_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -1405,7 +1405,7 @@ Type '\help' or '\?' for help; '\quit' to exit.
 Switching to Python mode...
  MySQL  Py >
  MySQL  Py >
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = 't_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -1439,7 +1439,7 @@ Type '\help' or '\?' for help; '\quit' to exit.
 Unknown command: '\pt'
  MySQL  JS > \py
 Switching to Python mode...
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = 't_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
@@ -1465,7 +1465,7 @@ Switching to Python mode...
 Traceback (most recent call last):
   File "<string>", line 8, in <module>
 mysqlsh.DBError: MySQL Error (1064): ClassicSession.run_sql: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FORCE char(1), FASTPAY char(1), RECEIVEDATE datetime, DUTYCENTERID varchar(32), ' at line 1
- MySQL  Py > conn1 = 'mysql://root:Cmbjx3ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
+ MySQL  Py > conn1 = 'mysql://root:1233ccwtn9@172.18.100.59:3306/ats?ssl-mode=DISABLED'
  MySQL  Py > rs = mysql.get_classic_session(conn1);
  MySQL  Py > columns_query = "SELECT COLUMN_NAME,COLUMN_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = 't_recments' AND TABLE_SCHEMA = 'ats'"
  MySQL  Py > columns_result = rs.run_sql(columns_query)
