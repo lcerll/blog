@@ -339,7 +339,7 @@ No query specified
 
 影响锁等待超时的参数
 
-![image-20230602141309749](C:\Users\itwb_lixl\AppData\Roaming\Typora\typora-user-images\image-20230602141309749.png)
+![image-20230602141309749](./image-20230602141309749.png)
 
 ## 5	全局读锁：
 
