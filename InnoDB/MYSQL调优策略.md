@@ -20,12 +20,15 @@
 * 修改vm.swappiness参数，降低swap使用率。RHEL7/centos7以上则慎重设置为0，可能发生OOM。调整vm.dirty_background_ratio、vm.dirty_ratio内核参数，以确保能持续将脏数据刷新到磁盘，避免瞬间I/O写。产生等待。调整net.ipv4.tcp_tw_recycle、net.ipv4.tcp_tw_reuse都设置为1，减少TIME_WAIT，提高TCP效率。
 
 ## 5、Mysql参数优化建议
-* 建议设置default-storage-engine=InnoDB，强烈建议不要再使用MyISAM引擎。
-* 调整innodb_buffer_pool_size的大小，如果是单实例且绝大多数是InnoDB引擎表的话，可考虑设置为物理内存的50% -70%左右。
+* 建议设置default-storage-engine=InnoDB，强烈建议不要再使用MyISAM引擎 。
+* 调整innodb_buffer_pool_size的大小，如果是单实例且绝大多数是InnoDB引擎表的话，可考虑设置为物理内存的50%即可。
 * 设置innodb_file_per_table = 1，使用独立表空间。
 * 调整innodb_data_file_path = ibdata1:1G:autoextend，不要用默认的10M,在高并发场景下，性能会有很大提升。
-* 设置innodb_log_file_size=256M，设置innodb_log_files_in_group=2，基本可以满足大多数应用场景。
+* 设置innodb_log_file_size=256M，设置innodb_log_files_in_group=2，基础设置，可根据业务进行更改。
 * 调整max_connection（最大连接数）、max_connection_error（最大错误数）设置，根据业务量大小进行设置。
 * 另外，open_files_limit、innodb_open_files、table_open_cache、table_definition_cache可以设置大约为max_connection的10倍左右大小。
 * key_buffer_size建议调小，32M左右即可，另外建议关闭query cache。
 * mp_table_size和max_heap_table_size设置不要过大，另外sort_buffer_size、join_buffer_size、read_buffer_size、read_rnd_buffer_size等设置也不要过大。
+* innodb_io_capacity 每秒执行的I/O操作数 ，官方建议 最高20000 再高也没有什么意义。
+* [安全]innodb_flush_log_at_trx_commit=1 每次事务提交都会 触发一次 redo log 刷盘。
+* [安全]sync_binlog=1 每次事务提交时，都要将 binlog 日志的变更刷入磁盘
