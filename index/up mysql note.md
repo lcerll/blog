@@ -34,7 +34,7 @@ RR创建readview时机 只会在第一次执行查询的时候生成一个readvi
 
 
 
-## 2.	InnoDB崩溃恢复流程
+## 2.	InnoDB崩溃恢复流程 (内核月报有一期 具体忘了)
 
 当InnoDB正常shutdown，在flush redo log 和脏页后，会做一次完全同步的checkpoint，并将checkpoint的LSN写到ibdata的第一个page中（`fil_write_flushed_lsn`）。在重启实例时，会打开系统表空间ibdata，并读取存储在其中的LSN：
 
