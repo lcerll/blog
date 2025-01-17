@@ -81,7 +81,7 @@ EXEC sys.sp_cdc_enable_table @source_schema = N'dbo',@source_name = N'PPS_C_JUDG
    info mgr #查看mgr进程相关 最终运行成功即可
    ```
 
-    ![image-20240606161143197](./imgs/image-20240606161143197.png)
+![image-20240606161143197](./imgs/image-20240606161143197.png)
 
 4.  配置 SQLSERVER 抽取进程 ext1
 
