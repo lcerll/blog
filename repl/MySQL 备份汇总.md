@@ -285,6 +285,20 @@ xtrabackup 是用来备份 InnoDB 表的，不能备份非 InnoDB 表，和 mysq
 
   -- 单表条件dump
 
+从ALL DATABASE 中恢复单表：
+获取单库：
+```sql
+sed -n '/^-- Current Database: `lis`/,/^-- Current Database: `/p' my57.sql > lis_backup.sql
+
+获取建表：
+```sql
+sed -e '/./{H;$!d;}' -e 'x;/CREATE TABLE `imagefileinfo`/!d;q' my57.sql
+
+获取表数据：
+```sql
+grep -i 'imagefileinfo' my57.sql | grep -v 'DROP' | grep -v 'CREATE' | grep -v 'LOCK' > imagefileinfo_1.sqlsed -e '/./{H;$!d;}' -e 'x;/CREATE TABLE `imagefileinfo`/!d;q' my57.sql
+
+
   /usr/local/mysql/bin/mysqldump -h 192.168.100.166 -P 3306 -uroot -p --single-transaction --skip-opt --databases payment --tables pay_sign_platform --where="create_date < '2023-08-08'" --triggers --rouines --events --master-data=2 --delete-master-logs --add-drop-database --create-options --complete-insert --extended-insert --disable-keys --set-charset --tz-utc --quick --log-error=/opt/mysqldump_pay_sign_platform.log >/opt/mysqldump_pay_sign_platform.sql
 
 #### MySQL Shell
