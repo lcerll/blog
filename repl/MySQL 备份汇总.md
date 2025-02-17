@@ -292,13 +292,13 @@ xtrabackup 是用来备份 InnoDB 表的，不能备份非 InnoDB 表，和 mysq
 sed -n '/^-- Current Database: `lis`/,/^-- Current Database: `/p' my57.sql > lis_backup.sql
 ```
 
-获取建表：
 ```sql
+获取建表：
 sed -e '/./{H;$!d;}' -e 'x;/CREATE TABLE `imagefileinfo`/!d;q' my57.sql
 ```
 
-获取表数据：
 ```sql
+获取表数据：
 grep -i 'imagefileinfo' my57.sql | grep -v 'DROP' | grep -v 'CREATE' | grep -v 'LOCK' > imagefileinfo_1.sqlsed -e '/./{H;$!d;}' -e 'x;/CREATE TABLE `imagefileinfo`/!d;q' my57.sql
 ```
 
