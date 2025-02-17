@@ -286,8 +286,9 @@ xtrabackup 是用来备份 InnoDB 表的，不能备份非 InnoDB 表，和 mysq
   -- 单表条件dump
 
 从ALL DATABASE 中恢复单表：
-获取单库：
+
 ```sql
+获取单库：
 sed -n '/^-- Current Database: `lis`/,/^-- Current Database: `/p' my57.sql > lis_backup.sql
 ```
 
