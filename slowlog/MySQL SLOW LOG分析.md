@@ -14,7 +14,7 @@ yum install -y perl-DBD-MySQL perl-Config-Tiny perl-Log-Dispatch perl-Parallel-F
 简单demo如下：
 
 ```sh
-./pt-query-digest --timeline --group-bu distill /data/mysql_3306/log/slow.log |tail -n 10
+./pt-query-digest --timeline --group-by distill /data/mysql_3306/log/slow.log |tail -n 10
 ```
 
 ![image-20230515163912711](./imgs/image-20230515163912711.png)
